@@ -104,7 +104,9 @@ public class UserController {
             return new ResponseEntity<>(userResponseDto, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-        }
-    }
+        }  
+
+        
+    }  
 
 }
