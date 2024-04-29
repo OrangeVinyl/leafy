@@ -11,6 +11,7 @@ services:
           cpus: '1'
           memory: 256M
     restart: always
+    platform: linux/amd64
 
   leafy-backend:
     build: ./leafy-backend
@@ -25,7 +26,8 @@ services:
           cpus: '1.5'
           memory: 512M
     restart: on-failure
-      
+    platform: linux/amd64
+
   leafy-front:
     build: ./leafy-frontend
     image: leafy-front:5.0.0-compose
@@ -41,6 +43,7 @@ services:
           cpus: '0.5'
           memory: 64M
     restart: on-failure
+    platform: linux/amd64
 
 volumes:
   mydata:
